@@ -1,0 +1,15 @@
+
+
+.row
+  .col-lg-4
+  .col-lg-4
+    %h1 New page
+    = form_tag controller: :pages, action: :create  do |f|
+      .form-group
+        = label_tag(:link, "URL:") 
+        = text_field_tag(:link ,"", class:"form-control")
+      .form-group
+        = label_tag(:tags, "Tags:") 
+        = text_field_tag(:tags,"", class: "form-control") 
+      = submit_tag("Submit" , class: "btn btn-primary")
+  

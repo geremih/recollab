@@ -19,7 +19,7 @@ gem "jquery-rails"
 
 # User authentication
 gem "devise", "3.2.4"
-
+gem "haml-rails"
 gem "omniauth-facebook"
 gem "kaminari"
 gem "ransack"
