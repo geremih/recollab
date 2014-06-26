@@ -7,7 +7,8 @@ class User < ActiveRecord::Base
   devise :omniauthable
 
   has_and_belongs_to_many :roles
-
+  has_many :pages
+  has_many :tags, through: :pages
   def role?(role)
     return !!self.roles.find_by_name(role.to_s)
   end
