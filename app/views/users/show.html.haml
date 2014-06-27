@@ -1,16 +1,28 @@
 
 .row
-  .col-lg-5
-  .col-lg-2
+  .col-lg-4
+  .col-lg-4
     %h1.text-center
       = gravatar_for @user
       = @user.name
 
-    %table.table
+    %table.table.text-center
+      %tr.active
+        %th.text-center
+          Tag
+
+        %th.text-center
+          Follower count
+        %th.text-center
       - @tags.each do |tag|
+
         %tr.active
           %td
             = tag.name
+          %td
+            %span.badge
+              = tag.followers.count
+
           %td
             - if @user.id != current_user.id
               - if current_user.followed_tags.include? tag
