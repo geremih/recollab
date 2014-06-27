@@ -1,33 +1,25 @@
-%h2 Visited by
-%ul
-  - @visited_by.each do | dict|
-    %li
-      = dict[:user]
 
-.detailBox
-  .titleBox
-    %label
-      Comment Box
-  .commentBox
-    %p.taskDescription
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry
-  .actionBox
-    %ul.commentList
-      - @comments.each do | comment|
-        %li
-          .commenterImage
-            = gravatar_for comment.page.user
-          .commentText
-            %p{class: " "}
-              = comment.body
-            %span.date.sub-text
-              on
-              = comment.updated_at.strftime("%B %d, %Y")
+- if !@comments.empty?
+  %ul.commentList.list-group#comments
+    - @comments.each do | comment|
+      %li.list-group-item
+        .commenterImage
+          = gravatar_for comment.page.user
+        .commentText
+          %p{class: " "}
+            = comment.body
+          %span.date.sub-text
+            on
+            = comment.updated_at.strftime("%B %d, %Y")
 
 
-    = #%form.form-inline{role: "form"}
-    = # .form-group
-    = #%input{class: "form-control" , type: "text" , placeholder: "Your comments" }
-    = #.form-group
-    = #        %button.btn.btn-default Add
-
+- if !@visited_by.empty?
+  %h4 Been there done that
+  %ul
+    - @visited_by.each do | dict|
+      %li
+        = gravatar_for dict[:user]
+        = dict[:user].name
+- else
+  No users have been here
+          

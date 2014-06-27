@@ -78,9 +78,9 @@ class PagesController < ApplicationController
           @comments << comment
         end
       end
-      @visited_by << {user: page.user.email ,time: page.updated_at }
+      @visited_by << {user: page.user ,time: page.updated_at }
     end
-
+    @comments = @comments.sort_by(&:updated_at).reverse
     respond_to  do |format|
       format.html 
       format.js 
