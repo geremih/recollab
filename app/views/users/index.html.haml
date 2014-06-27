@@ -1,10 +1,13 @@
-%h1 Users
+.row
+  .col-lg-4
+  .col-lg-4
+    %h1 Users
 
-%ul
-  - @users.each do |user|
-    %li
-      %a{href: user_path(user) }
-        = user.email
+    %ul.list-group
+      - @users.each do |user|
+        %li.list-group-item.text-center
+          %a{href: user_path(user) }
+            = user.email
     
 
 

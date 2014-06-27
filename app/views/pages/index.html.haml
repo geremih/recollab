@@ -1,0 +1,52 @@
+.row
+  .col-lg-4
+  .col-lg-4
+    - @pages.each do |page|
+      .corgi_feed_well
+        .individual_feed_item
+          .feed_item
+            .feed_body
+              .row
+                .feed_profile_pic
+                  = gravatar_for page.user
+                .feed_text
+                  %p
+                    = page.link
+            .comment_area{style: "display: none"}
+            %hr.feed_hr
+            .bottom_meta
+              .row
+                .bottom_left
+                  .share_wrapper
+                    .share
+                      %a.share_button{href:"#"}
+                        %i.icon-heart
+                    .share_hidden
+                      %ul.hover_heart
+                        %span.internal_heart
+                          %i.icon-heart
+                          Share This Post
+                        .social_links
+                          %li
+                            %span
+                              %i.icon-twitter
+                              Twitter
+                            %span
+                              %i.icon-facebook
+                              Facebook
+                            %span
+                              %i.icon-pinterest
+                              Pinterest
+                .bottom_right
+                  %a{href:"#"}
+                    =  page.tags.map(&:name).join(",")
+                  %span
+                    |
+                  %a.show_comment_link{href:"#"}
+                    comment
+                  %span |
+                  = page.updated_at.strftime("%B %d, %Y")
+    = paginate @pages
+
+
+      

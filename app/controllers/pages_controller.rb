@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!
+  protect_from_forgery :except => :create 
+    after_action :allow_iframe, only: :result
+
   def index
-    @pages = Page.all
+    @pages =Kaminari.paginate_array(current_user.followed_tags.map(&:pages).flatten.uniq.sort_by(&:updated_at).reverse).page(params[:page])
   end
 
   def new
@@ -21,7 +25,17 @@ class PagesController < ApplicationController
     if @page.nil?
       @page = current_user.pages.create(link: url)
     end
-    @tags = params[:tags].split(',').map(&:strip)
+
+    if params[:tags]
+      @tags = params[:tags].split(',').map(&:strip)
+    else
+      @tags = []
+    end
+    
+    comment = params[:comment]
+    if !comment.nil?
+      @page.comments.create(body: comment)
+    end
     user_tags = current_user.tags
     user_tags_names = user_tags.map(&:name).uniq
     @tags.each do |tag|
@@ -42,6 +56,14 @@ class PagesController < ApplicationController
 
   def result
     query = params[:link]
+    if !valid_uri? query
+      flash[:alert] = "Link is fucked up"
+      redirect_to new_page_path
+      return
+    end
+    uri = URI.parse(query)
+    query = uri.host + uri.path
+
     pages = current_user.followed_tags.map(&:pages)
     pages << current_user.pages
     pages.flatten!
@@ -53,10 +75,15 @@ class PagesController < ApplicationController
     @result.each do |page|
       if !page.comments.empty?
         page.comments.each do | comment|
-          @comments << {comment: comment.body , time: comment.updated_at}
+          @comments << comment
         end
       end
       @visited_by << {user: page.user.email ,time: page.updated_at }
+    end
+
+    respond_to  do |format|
+      format.html 
+      format.js 
     end
     
   end
@@ -71,6 +98,7 @@ class PagesController < ApplicationController
   def destroy
   end
 
+
   private
   def valid_uri?(string)
     uri = URI.parse(string)
@@ -79,5 +107,9 @@ class PagesController < ApplicationController
     false
   rescue URI::InvalidURIError
     false
+  end
+
+  def allow_iframe
+    response.headers.except! 'X-Frame-Options'
   end
 end

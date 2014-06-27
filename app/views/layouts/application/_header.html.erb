@@ -8,13 +8,14 @@
         <span class="icon-bar"></span>
       </button>
 
-      <%= link_to "Base Application", root_path, :class => "navbar-brand" %>
+      <%= link_to "Research Collab", root_path, :class => "navbar-brand" %>
     </div>
 
 
     <div class="collapse navbar-collapse" id="baseapp-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
+        <li><%= link_to "Users" , users_path %></li>
           <li><%= link_to "Account settings", edit_user_registration_path %></li>
           <% if current_user.admin? %>
             <li><%= link_to "Admin", admin_path %></li>

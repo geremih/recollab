@@ -3,7 +3,7 @@ BaseApp::Application.routes.draw do
 
   get 'links/create'
   get "pages/query"
-  post "pages/result"
+  get "pages/result"
   resources :pages
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -19,6 +19,6 @@ BaseApp::Application.routes.draw do
   end
   resources :users, only: [:show, :index]
   resources :follower_tag_relationships, only: [:create, :destroy]
-  root :to => "users#index"
+  root :to => "pages#index"
 
 end

@@ -1,8 +1,33 @@
 %h2 Visited by
+%ul
+  - @visited_by.each do | dict|
+    %li
+      = dict[:user]
 
-%p
-  = @visited_by
-%h2 Comments
-    
-%p
-  = @comments
+.detailBox
+  .titleBox
+    %label
+      Comment Box
+  .commentBox
+    %p.taskDescription
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry
+  .actionBox
+    %ul.commentList
+      - @comments.each do | comment|
+        %li
+          .commenterImage
+            = gravatar_for comment.page.user
+          .commentText
+            %p{class: " "}
+              = comment.body
+            %span.date.sub-text
+              on
+              = comment.updated_at.strftime("%B %d, %Y")
+
+
+    = #%form.form-inline{role: "form"}
+    = # .form-group
+    = #%input{class: "form-control" , type: "text" , placeholder: "Your comments" }
+    = #.form-group
+    = #        %button.btn.btn-default Add
+
