@@ -7,12 +7,16 @@
 
     %li.list-group-item
       = tag.name
-      - if @user.id != current_user
-        = form_for FollowerTagRelationship.new, html: {class: "nifty_form"} do |f|
-          = f.hidden_field :tag_id,  value: tag.id
-          - if current_user.followed_tags.include? tag
-            = f.submit "Unfollow", class: "btn btn-danger"
-          - else
-            = f.submit "Follow", class: "btn btn-primary"
+      - if @user.id != current_user.id
+        - if current_user.followed_tags.include? tag
+
+          = form_tag( {controller: :follower_tag_relationships, action: :destroy}, method: :delete, html: {class: "nifty_form"} )do
+
+            = hidden_field_tag :tag_id,   tag.id
+            = submit_tag "Unfollow", class: "btn btn-danger"
+        - else
+          = form_tag( {controller: :follower_tag_relationships, action: :create}, html: {class: "nifty_form"} )do 
+            = hidden_field_tag :tag_id,  tag.id
+            = submit_tag "Follow", class: "btn btn-primary"
         
   

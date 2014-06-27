@@ -4,7 +4,12 @@ class PagesController < ApplicationController
     after_action :allow_iframe, only: :result
 
   def index
-    @pages =Kaminari.paginate_array(current_user.followed_tags.map(&:pages).flatten.uniq.sort_by(&:updated_at).reverse).page(params[:page])
+    if params[:tag]
+      @pages = current_user.followed_tags.select{ |t| t.name == params[:tag]}.map(&:pages).flatten.uniq
+    else
+    @pages = current_user.followed_tags.map(&:pages).flatten.uniq
+    end
+    @pages =Kaminari.paginate_array(@pages.sort_by(&:updated_at).reverse).page(params[:page])
   end
 
   def new

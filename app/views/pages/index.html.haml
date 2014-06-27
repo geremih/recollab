@@ -19,13 +19,11 @@
               .row
                 .bottom_left
                   %a{href:"#"}
-                    =  page.tags.map(&:name).join(",")
+                    - page.tags.each do |tag|
+                      = link_to tag.name, pages_path(tag: tag.name) 
 
                 .bottom_right
                   = page.user.name
-                  %span |
-                  %a.show_comment_link{href:"#"}
-                    comments
                   %span |
                   = page.updated_at.strftime("%B %d, %Y")
     = paginate @pages
