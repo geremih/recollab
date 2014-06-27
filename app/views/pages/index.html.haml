@@ -22,6 +22,8 @@
                     =  page.tags.map(&:name).join(",")
 
                 .bottom_right
+                  = page.user.name
+                  %span |
                   %a.show_comment_link{href:"#"}
                     comments
                   %span |
