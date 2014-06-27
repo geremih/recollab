@@ -5,7 +5,7 @@
 
 
 ready = ->
-        $('#comments').slimScroll  height: "100px"
+        $('#comments').slimScroll  height: "400px"
         console.log "Scroll set"
 
 

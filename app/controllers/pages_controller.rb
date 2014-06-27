@@ -9,7 +9,7 @@ class PagesController < ApplicationController
     else
     @pages = current_user.followed_tags.map(&:pages).flatten.uniq
     end
-    @pages =Kaminari.paginate_array(@pages.sort_by(&:updated_at).reverse).page(params[:page])
+    @pages =Kaminari.paginate_array(@pages.sort_by(&:updated_at).reverse).page(params[:page]).per(10)
   end
 
   def new
@@ -101,6 +101,7 @@ class PagesController < ApplicationController
   end
 
   def destroy
+
   end
 
 
