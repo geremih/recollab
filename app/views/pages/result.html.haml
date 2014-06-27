@@ -1,7 +1,7 @@
 
 - if !@comments.empty?
   %ul.commentList.list-group#comments
-    - @comments.each do | comment|
+    - @comments.uniq.each do | comment|
       %li.list-group-item
         .commenterImage
           = gravatar_for comment.page.user
@@ -16,7 +16,7 @@
 - if !@visited_by.empty?
   %h4 Been there, done that
   %ul
-    - @visited_by.each do | dict|
+    - @visited_by.uniq.each do | dict|
       %li
         = gravatar_for dict[:user]
         = dict[:user].name

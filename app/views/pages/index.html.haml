@@ -15,6 +15,13 @@
                       = page.link
             %hr.feed_hr
             .comment_area{style: "display: none"}
+              %ul.list-group
+                - page.comments.sort_by(&:updated_at).reverse.each do |comment|
+                  %li.list-group-item
+                    = comment.body
+                    %span.badge
+                      = comment.updated_at.strftime("%B %d, %Y")
+
             .bottom_meta
               .row
                 .bottom_left
@@ -26,6 +33,7 @@
                   = page.user.name
                   %span |
                   = page.updated_at.strftime("%B %d, %Y")
+                  %a.show_comment_link{href:"#"} Comments
     = paginate @pages
 
 

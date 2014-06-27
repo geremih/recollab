@@ -17,7 +17,6 @@ class PagesController < ApplicationController
   end
 
   def create
-
     url = params[:link]
     if !valid_uri? url
       flash[:alert] = "Link is fucked up"
