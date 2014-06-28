@@ -5,9 +5,9 @@ class PagesController < ApplicationController
 
   def index
     if params[:tag]
-      @pages = current_user.followed_tags.select{ |t| t.name == params[:tag]}.map(&:pages).flatten.uniq
+      @pages = current_user.followed_tags.select{ |t| t.name == params[:tag]}.map(&:pages).flatten.uniq + current_user.tags.select{ |t| t.name == params[:tag]}.map(&:pages).flatten.uniq
     else
-    @pages = current_user.followed_tags.map(&:pages).flatten.uniq
+    @pages = current_user.followed_tags.map(&:pages).flatten.uniq +  current_user.pages.flatten.uniq
     end
     @pages =Kaminari.paginate_array(@pages.sort_by(&:updated_at).reverse).page(params[:page]).per(10)
   end
