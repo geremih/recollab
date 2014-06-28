@@ -11,7 +11,7 @@
 
 
 body {
-	background: url("http://www.3solarmasses.com/corgi-bootstrap/img/billie_holiday.png") repeat;
+	background-color: #e9eaed;
 }
 .well {
 	border: 1px solid #ddd;
@@ -112,8 +112,7 @@ body {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	background-color:#fff;
-	background: url("http://www.3solarmasses.com/corgi-bootstrap/img/tiny_grid.png") repeat;
+	background-color:  #e9eaed;
 }
 .sidebar_title {
 	padding:20px;
@@ -124,8 +123,7 @@ body {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	background-color:#333;
-	background: url("http://www.3solarmasses.com/corgi-bootstrap/img/tiny_grid.png") repeat;
+	background-color:  #e9eaed;
 }
 .picture_header_title {
 	padding:20px;
