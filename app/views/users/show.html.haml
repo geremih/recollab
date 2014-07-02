@@ -36,5 +36,7 @@
                 = form_tag( {controller: :follower_tag_relationships, action: :create}, html: {class: "nifty_form"} )do 
                   = hidden_field_tag :tag_id,  tag.id
                   = submit_tag "Follow", class: "btn btn-primary"
-
+            - else
+              = form_tag( tag_path(tag), method: :delete, html: {class: "nifty_form"} )do
+                = submit_tag "Delete", class: "btn btn-danger"
       = paginate @tags
