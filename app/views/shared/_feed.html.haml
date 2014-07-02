@@ -11,6 +11,8 @@
                   = gravatar_for page.user
                 .feed_text
                   %p
+                    = page.title
+                  %p
                     %a{href: "http://" + page.link , :target => "_blank"}
                       = page.link
             %hr.feed_hr

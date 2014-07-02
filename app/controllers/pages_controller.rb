@@ -33,7 +33,7 @@ class PagesController < ApplicationController
     url = "#{uri.host}#{uri.path}#{query}#{fragment}"
     @page = current_user.pages.find_by_link( url)
     if @page.nil?
-      @page = current_user.pages.create(link: url)
+      @page = current_user.pages.create(link: url, title: params[:title])
     end
 
     if params[:tags]

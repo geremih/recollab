@@ -6,6 +6,9 @@
     %h1 New page
     = form_tag controller: :pages, action: :create  do |f|
       .form-group
+        = label_tag(:link, "Title:") 
+        = text_field_tag(:title ,"", class:"form-control")
+      .form-group
         = label_tag(:link, "URL:") 
         = text_field_tag(:link ,"", class:"form-control")
       .form-group
