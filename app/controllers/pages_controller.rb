@@ -24,7 +24,13 @@ class PagesController < ApplicationController
       return
     end
     uri = URI.parse(url)
-    url = uri.host + uri.path
+    if !uri.query.nil?
+      query = "?#{uri.query}"
+    end
+    if !uri.fragment.nil?
+      fragment = "##{uri.fragment}"
+    end
+    url = "#{uri.host}#{uri.path}#{query}#{fragment}"
     @page = current_user.pages.find_by_link( url)
     if @page.nil?
       @page = current_user.pages.create(link: url)
