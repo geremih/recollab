@@ -18,7 +18,8 @@
 
         %tr.active
           %td
-            = tag.name
+            %a{href: tag_path(tag)}
+              = tag.name
           %td
             %span.badge
               = tag.followers.count
