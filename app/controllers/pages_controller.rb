@@ -111,7 +111,7 @@ class PagesController < ApplicationController
     response.headers.except! 'X-Frame-Options'
   end
 
-  def final_url
+  def final_url(url)
     if !valid_uri? url
       flash[:alert] = "Link is fucked up"
       redirect_to new_page_path
