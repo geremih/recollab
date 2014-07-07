@@ -18,7 +18,7 @@
                         = page.link
                 .col-md-1
                   - if page.user == current_user
-                    = button_to "X", page , method: "delete" , class: "btn btn-xs btn-danger"
+                    = button_to "X", page , method: "delete" , class: "btn btn-xs"
             %hr.feed_hr
             - if !page.comments.empty?
               .comment_area{style: "display: none"}
