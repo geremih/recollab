@@ -1,8 +1,11 @@
 BaseApp::Application.routes.draw do
   get 'static_pages/home'
+  get 'static_pages/help'
   get 'links/create'
   get "pages/query"
   get "pages/result"
+
+
   resources :pages
   resources :tags, only: [:show, :destroy]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
