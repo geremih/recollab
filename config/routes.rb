@@ -1,4 +1,5 @@
 BaseApp::Application.routes.draw do
+  get 'static_pages/home'
   get 'links/create'
   get "pages/query"
   get "pages/result"
@@ -17,6 +18,7 @@ BaseApp::Application.routes.draw do
   end
   resources :users, only: [:show, :index]
   resources :follower_tag_relationships, only: [:create, :destroy]
-  root :to => "pages#index"
+  root :to => "static_pages#home"
+  get 'user_root', to: "pages#index"
 
 end
