@@ -18,19 +18,7 @@ class PagesController < ApplicationController
 
   def create
     url = params[:link]
-    if !valid_uri? url
-      flash[:alert] = "Link is fucked up"
-      redirect_to new_page_path
-      return
-    end
-    uri = URI.parse(url)
-    if !uri.query.nil?
-      query = "?#{uri.query}"
-    end
-    if !uri.fragment.nil?
-      fragment = "##{uri.fragment}"
-    end
-    url = "#{uri.host}#{uri.path}#{query}#{fragment}"
+    url = final_url(url)
     @page = current_user.pages.find_by_link( url)
     if @page.nil?
       @page = current_user.pages.create(link: url, title: params[:title])
@@ -66,13 +54,7 @@ class PagesController < ApplicationController
 
   def result
     query = params[:link]
-    if !valid_uri? query
-      flash[:alert] = "Link is fucked up"
-      redirect_to new_page_path
-      return
-    end
-    uri = URI.parse(query)
-    query = uri.host + uri.path
+    query = final_url(query)
 
     pages = current_user.followed_tags.map(&:pages)
     pages << current_user.pages
@@ -106,7 +88,12 @@ class PagesController < ApplicationController
   end
 
   def destroy
-
+    id = params[:id].to_i
+    page = Page.find(id)
+    if !page.nil? && page.user == current_user
+      page.destroy
+    end
+    redirect_to :back
   end
 
 
@@ -122,5 +109,21 @@ class PagesController < ApplicationController
 
   def allow_iframe
     response.headers.except! 'X-Frame-Options'
+  end
+
+  def final_url
+    if !valid_uri? url
+      flash[:alert] = "Link is fucked up"
+      redirect_to new_page_path
+      return
+    end
+    uri = URI.parse(url)
+    if !uri.query.nil?
+      query = "?#{uri.query}"
+    end
+    if !uri.fragment.nil?
+      fragment = "##{uri.fragment}"
+    end
+    "#{uri.host}#{uri.path}#{query}#{fragment}"
   end
 end
