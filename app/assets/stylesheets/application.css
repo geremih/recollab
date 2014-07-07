@@ -11,3 +11,7 @@
 .navbar-header {
     font-family: 'Kaushan Script', cursive;
 }
+
+html, body {
+  height:100%;
+}

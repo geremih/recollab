@@ -7,23 +7,27 @@
           .feed_item
             .feed_body
               .row
-                .feed_profile_pic
+                .col-md-1
                   = gravatar_for page.user
-                .feed_text
-                  %p
-                    = page.title
-                  %p
-                    %a{href: "http://" + page.link , :target => "_blank"}
-                      = page.link
+                .col-md-9.col-md-offset-1
+                  .feed_text
+                    %p
+                      = page.title
+                    %p
+                      %a{href: "http://" + page.link , :target => "_blank"}
+                        = page.link
+                .col-md-1
+                  - if page.user == current_user
+                    = button_to "X", page , method: "delete" , class: "btn btn-xs btn-danger"
             %hr.feed_hr
-            .comment_area{style: "display: none"}
-              %ul.list-group
-                - page.comments.sort_by(&:updated_at).reverse.each do |comment|
-                  %li.list-group-item
-                    = comment.body
-                    %span.badge
-                      = comment.updated_at.strftime("%B %d, %Y")
-
+            - if !page.comments.empty?
+              .comment_area{style: "display: none"}
+                %ul.list-group
+                  - page.comments.sort_by(&:updated_at).reverse.each do |comment|
+                    %li.list-group-item
+                      = comment.body
+                      %span.badge
+                        = comment.updated_at.strftime("%B %d, %Y")
             .bottom_meta
               .row
                 .bottom_left
@@ -35,7 +39,8 @@
                   = page.user.name
                   %span |
                   = page.updated_at.strftime("%B %d, %Y")
-                  %a.show_comment_link{href:"#"} Comments
+                  %a.show_comment_link{href:"#"} 
+                    = "Comments (#{page.comments.count})"
     = paginate pages
 
 

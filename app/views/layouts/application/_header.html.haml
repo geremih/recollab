@@ -6,11 +6,15 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      = link_to "reCollab", root_path, :class => "navbar-brand" 
+      - if user_signed_in? 
+        = link_to "reCollab", pages_path, :class => "navbar-brand" 
+      - else
+        = link_to "reCollab", root_path, :class => "navbar-brand" 
     .collapse.navbar-collapse#baseapp-navbar-collapse-1
-      %ul.nav.navbar-nav
-        %li
-          = link_to "Add page", new_page_path
+      - if user_signed_in? 
+        %ul.nav.navbar-nav
+          %li
+            = link_to "Add page", new_page_path
       %ul.nav.navbar-nav.navbar-right
         %li
           = link_to "Chrome extension", "https://www.dropbox.com/s/oxot38u4r29qp7i/Collab0.0.2.zip?dl=1" 
@@ -30,3 +34,4 @@
             = link_to "Sign up", new_user_registration_path 
           %li 
             = link_to "Sign in", new_user_session_path 
+-
