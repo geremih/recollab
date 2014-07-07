@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/rails/sass-rails.git
+  revision: 3a9e47db7d769221157c82229fc1bade55b580f0
+  specs:
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (~> 3.2)
+      sprockets (~> 2.12)
+      sprockets-rails (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -193,6 +203,7 @@ GEM
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
     rubyzip (1.1.3)
+    sass (3.3.9)
     selenium-webdriver (2.41.0)
       childprocess (>= 0.5.0)
       multi_json (~> 1.0)
@@ -260,6 +271,7 @@ DEPENDENCIES
   rails_12factor
   ransack
   rspec-rails
+  sass-rails!
   selenium-webdriver
   shoulda
   sqlite3

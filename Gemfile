@@ -17,6 +17,8 @@ gem "coffee-rails", "~> 4.0.0"
 # Use jQuery as the JavaScript library
 gem "jquery-rails"
 
+gem 'sass-rails', github: 'rails/sass-rails'
+
 # User authentication
 gem "devise", "3.2.4"
 gem "haml-rails"
