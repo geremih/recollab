@@ -9,9 +9,11 @@
 .top48 { margin-top: 48px; }
 
 .navbar-header {
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Raleway', cursive;
+    
 }
 
 html, body {
   height:100%;
+font-family: 'Lato', sans-serif;
 }

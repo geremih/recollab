@@ -8,17 +8,11 @@
   </head>
 
   <body>
-
-    <%= render "layouts/application/header" %>
-
-    <div class="container">
-
-      <%= render "layouts/application/flash_messages" %>
-
-      <%= yield %>
-
+    <div class="cover-overlay">
+      <div class="container">
+        <%= yield %>
+      </div>
     </div>
-g
   </body>
 
 </html>
