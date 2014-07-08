@@ -1,0 +1,1415 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+
+
+*/
+
+
+.top48 { margin-top: 48px; }
+
+.navbar-header {
+    font-family: 'Raleway', cursive;
+    
+}
+
+html, body {
+  height:100%;
+font-family: 'Lato', sans-serif;
+}
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+
+/* 
+	Corgi: custom bootstrap theme. 
+	Author: Damian Sowers
+*/
+
+
+
+body {
+	background-color: #e9eaed;
+}
+.well {
+	border: 1px solid #ddd;
+	background: -webkit-linear-gradient(top, #ffffff, #f9f9f9);
+	background: -moz-linear-gradient(top, #ffffff, #f9f9f9);
+	background-color: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius:5px;
+}
+.corgi_well {
+	background-color:#fff;
+	padding: 20px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: inset 0 0 2px 2px #ffffff;
+	-webkit-box-shadow: inset 0 0 2px 2px #ffffff;
+	box-shadow: inset 0 0 2px 2px #ffffff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.corgi_feed_well {
+	background-color:#fff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0px 0px 2px 2px #ffffff;
+	box-shadow: inset 0px 0px 2px 2px #ffffff;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+	margin-bottom:20px;
+}
+.meta_image {
+	width: 50px;
+	height: 50px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	border-radius: 150px;
+	border:4px solid #efefef;
+}
+.feed_body {
+	padding:20px;
+/*	border-bottom:1px solid #efefef;*/
+	margin-bottom:0;
+}
+.feed_profile_pic {
+	float:left;
+	width:10%;
+	margin-left:15px;
+	margin-right:15px;
+}
+
+.feed_icon {
+	float:right;
+	width:1%;
+	margin-right:15px;
+}
+
+.feed_text {
+	float:left;
+	width:80%;
+	font-size:18px;
+	color:#666;
+}
+.bottom_meta {
+	margin-top:-10px;
+	padding-left:20px;
+        padding-right:10px;
+	padding-bottom:20px;
+}
+.feed_stacked {
+	border-bottom: 1px solid #efefef;
+}
+.last_feed_item {
+	border:none;
+}
+.bottom_left {
+	float:left;
+	margin-left:20px;
+}
+.bottom_right {
+	float:right;
+	margin-right:20px;
+	color:#999;
+	font-size:12px;
+}
+.bottom_right span {
+	color:#ccc;
+}
+.bottom_right a {
+	font-weight:bold;
+}
+.comment_area {
+	display:none;
+	padding:20px;
+
+}
+.feed_hr {
+	margin-top:0;
+	margin-bottom:20px;
+	padding-top:0;
+}
+
+.sidebar_header {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color:  #e9eaed;
+}
+.sidebar_title {
+	padding:20px;
+	color:#333;
+		text-shadow: 0 2px 0 #fff;
+}
+.picture_header {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color:  #e9eaed;
+}
+.picture_header_title {
+	padding:20px;
+}
+.picture_header_title h2 {
+	color:#333;
+	text-shadow: 0 2px 0 #fff;
+}
+.sidebar_interior {
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:20px;
+}
+.corgi_footer {
+	background-color:#fff;
+	height:80px;
+}
+.corgi_footer ul {
+	margin:0;
+	margin-top:20px;
+	float:left;
+}
+.corgi_footer ul li {
+	padding-top:20px;
+	padding-right:20px;
+	display:inline;
+	list-style-type:none;
+}
+.corgi_copyright {
+	float:right;
+	margin-top:20px;
+}
+.share {
+	background-color:#57ad68;
+	padding:5px;
+	width:18px;
+	height:18px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+	text-align:center;
+}
+.share a {
+	color:#fff;
+	z-index:1;
+}
+.share a:hover {
+	text-decoration:none;
+}
+.share_hidden {
+	background-color:#57ad68;
+	padding:15px 0 0 15px;
+	display:none;
+	position:absolute;
+	margin-top:-30px;
+	z-index:0;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+.internal_heart {
+	color:#fff;
+	padding-right:15px;
+}
+.share_hidden ul li {
+	list-style-type: none; 
+	display:block;
+	color:#fff;
+	margin-left:-7px;
+	margin-right:0;
+	padding-right:0;
+	padding:5px;
+/*	border-bottom:1px solid #efefef;*/
+}
+.share_hidden ul li:hover {
+	background-color:#111;
+	margin-right:0;
+	padding-right:0;
+}
+.hover_heart {
+	margin-left:-8px;
+	margin-top:-8px;
+/*	margin-left:-37px;
+	margin-top:-9px;*/
+}
+.share_hidden ul li span {
+	margin-left:10px;
+}
+.social_links {
+	margin-top:5px;
+}
+.well_padding {
+	padding:20px;
+}
+.title_hr {
+	margin-top:0;
+	margin-bottom:0;
+	padding-top:0;
+}
+.elusive_icons li {
+	list-style-type:none;
+}
+@font-face {
+  font-family: 'Elusive-Icons';
+  src:url('../font/Elusive-Icons.eot');
+  src:url('../font/Elusive-Icons.eot?#iefix') format('embedded-opentype'),
+    url('../font/Elusive-Icons.svg#Elusive-Icons') format('svg'),
+    url('../font/Elusive-Icons.woff') format('woff'),
+    url('../font/Elusive-Icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: 'Elusive-Icons';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'Elusive-Icons';
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.icon-large:before {
+  vertical-align: middle;
+  font-size: 1.33em;
+}
+
+.btn [class^="icon-"],
+.btn [class*=" icon-"],
+.nav-tabs [class^="icon-"],
+.nav-tabs [class*=" icon-"] {
+  /* keeps button heights with and without icons the same */
+  line-height: .9em;
+}
+
+li [class^="icon-"],
+li [class*=" icon-"] {
+  display: inline-block;
+  width: 1.25em;
+  text-align: center;
+}
+
+li .icon-large:before,
+li .icon-large:before {
+  width: 1.875em;
+}
+
+ul.icons {
+  list-style-type: none;
+  margin-left: 2em;
+  text-indent: -.8em;
+}
+
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
+  width: .8em;
+}
+
+ul.icons li .icon-large:before,
+ul.icons li .icon-large:before {
+  vertical-align: initial;
+}
+
+.btn-large [class^="icon-"], .btn-large [class*=" icon-"]{
+  margin-top: 0;
+}
+
+.icon-briefcase:before {
+  content: "\e10d";
+}
+.icon-bullhorn:before {
+  content: "\e10c";
+}
+.icon-calendar:before {
+  content: "\e10b";
+}
+.icon-calendar-sign:before {
+  content: "\e10a";
+}
+.icon-cog:before {
+  content: "\e109";
+}
+.icon-cog-alt:before {
+  content: "\e108";
+}
+.icon-cogs:before {
+  content: "\e107";
+}
+.icon-comment:before {
+  content: "\e106";
+}
+.icon-error:before {
+  content: "\e105";
+}
+.icon-error-alt:before {
+  content: "\e104";
+}
+.icon-exclamation-sign:before {
+  content: "\e103";
+}
+.icon-eye-close:before {
+  content: "\e102";
+}
+.icon-flag-alt:before {
+  content: "\e101";
+}
+.icon-flickr:before {
+  content: "\e100";
+}
+.icon-folder:before {
+  content: "\e0ff";
+}
+.icon-folder-close:before {
+  content: "\e0fe";
+}
+.icon-globe-alt:before {
+  content: "\e0fd";
+}
+.icon-googleplus:before {
+  content: "\e0fc";
+}
+.icon-graph:before {
+  content: "\e0fb";
+}
+.icon-graph-alt:before {
+  content: "\e0fa";
+}
+.icon-idea-alt:before {
+  content: "\e0f9";
+}
+.icon-inbox:before {
+  content: "\e0f8";
+}
+.icon-inbox-alt:before {
+  content: "\e0f7";
+}
+.icon-inbox-box:before {
+  content: "\e0f6";
+}
+.icon-book:before {
+  content: "\e0f5";
+}
+.icon-bookmark:before {
+  content: "\e0f4";
+}
+.icon-bookmark-empty:before {
+  content: "\e0f3";
+}
+.icon-braille:before {
+  content: "\e0f2";
+}
+.icon-circle-arrow-right:before {
+  content: "\e0f1";
+}
+.icon-circle-arrow-up:before {
+  content: "\e0f0";
+}
+.icon-cloud:before {
+  content: "\e0ef";
+}
+.icon-cloud-alt:before {
+  content: "\e0ee";
+}
+.icon-edit:before {
+  content: "\e0ed";
+}
+.icon-eject:before {
+  content: "\e0ec";
+}
+.icon-envelope:before {
+  content: "\e0eb";
+}
+.icon-envelope-alt:before {
+  content: "\e0ea";
+}
+.icon-film:before {
+  content: "\e0e9";
+}
+.icon-filter:before {
+  content: "\e0e8";
+}
+.icon-fire:before {
+  content: "\e0e7";
+}
+.icon-flag:before {
+  content: "\e0e6";
+}
+.icon-github-text:before {
+  content: "\e0e5";
+}
+.icon-glass:before {
+  content: "\e0e4";
+}
+.icon-glasses:before {
+  content: "\e0e3";
+}
+.icon-globe:before {
+  content: "\e0e2";
+}
+.icon-heart-empty:before {
+  content: "\e0e1";
+}
+.icon-home:before {
+  content: "\e0e0";
+}
+.icon-home-alt:before {
+  content: "\e0df";
+}
+.icon-idea:before {
+  content: "\e0de";
+}
+.icon-address-book:before {
+  content: "\e0dd";
+}
+.icon-address-book-alt:before {
+  content: "\e0dc";
+}
+.icon-adjust:before {
+  content: "\e0db";
+}
+.icon-adult:before {
+  content: "\e0da";
+}
+.icon-align-center:before {
+  content: "\e0d9";
+}
+.icon-align-justify:before {
+  content: "\e0d8";
+}
+.icon-align-left:before {
+  content: "\e0d7";
+}
+.icon-align-right:before {
+  content: "\e0d6";
+}
+.icon-arrow-down:before {
+  content: "\e0d5";
+}
+.icon-arrow-left:before {
+  content: "\e0d4";
+}
+.icon-barcode:before {
+  content: "\e0d3";
+}
+.icon-behance:before {
+  content: "\e0d2";
+}
+.icon-bell:before {
+  content: "\e0d1";
+}
+.icon-blind:before {
+  content: "\e0d0";
+}
+.icon-blogger:before {
+  content: "\e0cf";
+}
+.icon-bold:before {
+  content: "\e0ce";
+}
+.icon-chevron-left:before {
+  content: "\e0cd";
+}
+.icon-chevron-right:before {
+  content: "\e0cc";
+}
+.icon-chevron-up:before {
+  content: "\e0cb";
+}
+.icon-child:before {
+  content: "\e0ca";
+}
+.icon-circle-arrow-down:before {
+  content: "\e0c9";
+}
+.icon-circle-arrow-left:before {
+  content: "\e0c8";
+}
+.icon-delicious:before {
+  content: "\e0c7";
+}
+.icon-deviantart:before {
+  content: "\e0c6";
+}
+.icon-digg:before {
+  content: "\e0c5";
+}
+.icon-download:before {
+  content: "\e0c4";
+}
+.icon-download-alt:before {
+  content: "\e0c3";
+}
+.icon-dribble:before {
+  content: "\e0c2";
+}
+.icon-file:before {
+  content: "\e0c1";
+}
+.icon-file-alt:before {
+  content: "\e0c0";
+}
+.icon-file-edit:before {
+  content: "\e0bf";
+}
+.icon-file-edit-alt:before {
+  content: "\e0be";
+}
+.icon-file-new:before {
+  content: "\e0bd";
+}
+.icon-file-new-alt:before {
+  content: "\e0bc";
+}
+.icon-foursquare:before {
+  content: "\e0bb";
+}
+.icon-friendfeed:before {
+  content: "\e0ba";
+}
+.icon-friendfeed-rect:before {
+  content: "\e0b9";
+}
+.icon-fullscreen:before {
+  content: "\e0b8";
+}
+.icon-gift:before {
+  content: "\e0b7";
+}
+.icon-github:before {
+  content: "\e0b6";
+}
+.icon-hand-up:before {
+  content: "\e0b5";
+}
+.icon-hdd:before {
+  content: "\e0b4";
+}
+.icon-headphones:before {
+  content: "\e0b3";
+}
+.icon-hearing-impaired:before {
+  content: "\e0b2";
+}
+.icon-heart:before {
+  content: "\e0b1";
+}
+.icon-heart-alt:before {
+  content: "\e0b0";
+}
+.icon-arrow-right:before {
+  content: "\e0af";
+}
+.icon-arrow-up:before {
+  content: "\e0ae";
+}
+.icon-asl:before {
+  content: "\e0ad";
+}
+.icon-asterisk:before {
+  content: "\e0ac";
+}
+.icon-backward:before {
+  content: "\e0ab";
+}
+.icon-ban-circle:before {
+  content: "\e0aa";
+}
+.icon-camera:before {
+  content: "\e0a9";
+}
+.icon-cc:before {
+  content: "\e0a8";
+}
+.icon-certificate:before {
+  content: "\e0a7";
+}
+.icon-check:before {
+  content: "\e0a6";
+}
+.icon-check-empty:before {
+  content: "\e0a5";
+}
+.icon-chevron-down:before {
+  content: "\e0a4";
+}
+.icon-comment-alt:before {
+  content: "\e0a3";
+}
+.icon-compass:before {
+  content: "\e0a2";
+}
+.icon-compass-alt:before {
+  content: "\e0a1";
+}
+.icon-credit-card:before {
+  content: "\e0a0";
+}
+.icon-css:before {
+  content: "\e09f";
+}
+.icon-dashboard:before {
+  content: "\e09e";
+}
+.icon-eye-open:before {
+  content: "\e09d";
+}
+.icon-facebook:before {
+  content: "\e09c";
+}
+.icon-facetime-video:before {
+  content: "\e09b";
+}
+.icon-fast-backward:before {
+  content: "\e09a";
+}
+.icon-fast-forward:before {
+  content: "\e099";
+}
+.icon-female:before {
+  content: "\e098";
+}
+.icon-folder-open:before {
+  content: "\e097";
+}
+.icon-folder-sign:before {
+  content: "\e096";
+}
+.icon-font:before {
+  content: "\e095";
+}
+.icon-fontsize:before {
+  content: "\e094";
+}
+.icon-forward:before {
+  content: "\e093";
+}
+.icon-forward-alt:before {
+  content: "\e092";
+}
+.icon-group:before {
+  content: "\e091";
+}
+.icon-group-alt:before {
+  content: "\e090";
+}
+.icon-guidedog:before {
+  content: "\e08f";
+}
+.icon-hand-down:before {
+  content: "\e08e";
+}
+.icon-hand-left:before {
+  content: "\e08d";
+}
+.icon-hand-right:before {
+  content: "\e08c";
+}
+.icon-indent-left:before {
+  content: "\e08b";
+}
+.icon-indent-right:before {
+  content: "\e08a";
+}
+.icon-info-sign:before {
+  content: "\e089";
+}
+.icon-instagram:before {
+  content: "\e088";
+}
+.icon-iphone-home:before {
+  content: "\e087";
+}
+.icon-italic:before {
+  content: "\e086";
+}
+.icon-key:before {
+  content: "\e085";
+}
+.icon-laptop:before {
+  content: "\e084";
+}
+.icon-laptop-alt:before {
+  content: "\e083";
+}
+.icon-leaf:before {
+  content: "\e082";
+}
+.icon-linkedin:before {
+  content: "\e081";
+}
+.icon-list:before {
+  content: "\e080";
+}
+.icon-list-alt:before {
+  content: "\e07f";
+}
+.icon-lock:before {
+  content: "\e07e";
+}
+.icon-lock-alt:before {
+  content: "\e07d";
+}
+.icon-magnet:before {
+  content: "\e07c";
+}
+.icon-male:before {
+  content: "\e07b";
+}
+.icon-map-marker:before {
+  content: "\e07a";
+}
+.icon-map-marker-alt:before {
+  content: "\e079";
+}
+.icon-mic:before {
+  content: "\e078";
+}
+.icon-mic-alt:before {
+  content: "\e077";
+}
+.icon-minus:before {
+  content: "\e076";
+}
+.icon-minus-sign:before {
+  content: "\e075";
+}
+.icon-move:before {
+  content: "\e074";
+}
+.icon-music:before {
+  content: "\e073";
+}
+.icon-network:before {
+  content: "\e072";
+}
+.icon-off:before {
+  content: "\e071";
+}
+.icon-ok:before {
+  content: "\e070";
+}
+.icon-ok-circle:before {
+  content: "\e06f";
+}
+.icon-ok-sign:before {
+  content: "\e06e";
+}
+.icon-paper-clip:before {
+  content: "\e06d";
+}
+.icon-paper-clip-alt:before {
+  content: "\e06c";
+}
+.icon-path:before {
+  content: "\e06b";
+}
+.icon-pause:before {
+  content: "\e06a";
+}
+.icon-pause-alt:before {
+  content: "\e069";
+}
+.icon-pencil:before {
+  content: "\e068";
+}
+.icon-pencil-alt:before {
+  content: "\e067";
+}
+.icon-person:before {
+  content: "\e066";
+}
+.icon-phone:before {
+  content: "\e065";
+}
+.icon-phone-alt:before {
+  content: "\e064";
+}
+.icon-photo:before {
+  content: "\e063";
+}
+.icon-photo-alt:before {
+  content: "\e062";
+}
+.icon-picasa:before {
+  content: "\e061";
+}
+.icon-picture:before {
+  content: "\e060";
+}
+.icon-pinterest:before {
+  content: "\e05f";
+}
+.icon-plane:before {
+  content: "\e05e";
+}
+.icon-play:before {
+  content: "\e05d";
+}
+.icon-play-alt:before {
+  content: "\e05c";
+}
+.icon-play-circle:before {
+  content: "\e05b";
+}
+.icon-plus:before {
+  content: "\e05a";
+}
+.icon-plus-sign:before {
+  content: "\e059";
+}
+.icon-print:before {
+  content: "\e058";
+}
+.icon-qrcode:before {
+  content: "\e057";
+}
+.icon-question:before {
+  content: "\e056";
+}
+.icon-question-sign:before {
+  content: "\e055";
+}
+.icon-quotes:before {
+  content: "\e054";
+}
+.icon-quotes-alt:before {
+  content: "\e053";
+}
+.icon-random:before {
+  content: "\e052";
+}
+.icon-record:before {
+  content: "\e051";
+}
+.icon-reddit:before {
+  content: "\e050";
+}
+.icon-refresh:before {
+  content: "\e04f";
+}
+.icon-remove:before {
+  content: "\e04e";
+}
+.icon-remove-circle:before {
+  content: "\e04d";
+}
+.icon-remove-sign:before {
+  content: "\e04c";
+}
+.icon-repeat:before {
+  content: "\e04b";
+}
+.icon-repeat-alt:before {
+  content: "\e04a";
+}
+.icon-resize-full:before {
+  content: "\e049";
+}
+.icon-resize-horizontal:before {
+  content: "\e048";
+}
+.icon-resize-small:before {
+  content: "\e047";
+}
+.icon-resize-vertical:before {
+  content: "\e046";
+}
+.icon-retweet:before {
+  content: "\e045";
+}
+.icon-reverse-alt:before {
+  content: "\e044";
+}
+.icon-road:before {
+  content: "\e043";
+}
+.icon-rss:before {
+  content: "\e042";
+}
+.icon-screen:before {
+  content: "\e041";
+}
+.icon-screen-alt:before {
+  content: "\e040";
+}
+.icon-screenshot:before {
+  content: "\e03f";
+}
+.icon-search:before {
+  content: "\e03e";
+}
+.icon-search-alt:before {
+  content: "\e03d";
+}
+.icon-share:before {
+  content: "\e03c";
+}
+.icon-share-alt:before {
+  content: "\e03b";
+}
+.icon-shopping-cart:before {
+  content: "\e03a";
+}
+.icon-shopping-cart-sign:before {
+  content: "\e039";
+}
+.icon-signal:before {
+  content: "\e038";
+}
+.icon-skype:before {
+  content: "\e037";
+}
+.icon-slideshare:before {
+  content: "\e036";
+}
+.icon-smiley:before {
+  content: "\e035";
+}
+.icon-smiley-alt:before {
+  content: "\e034";
+}
+.icon-speaker:before {
+  content: "\e033";
+}
+.icon-stackoverflow:before {
+  content: "\e032";
+}
+.icon-star:before {
+  content: "\e031";
+}
+.icon-star-alt:before {
+  content: "\e030";
+}
+.icon-star-empty:before {
+  content: "\e02f";
+}
+.icon-step-backward:before {
+  content: "\e02e";
+}
+.icon-step-forward:before {
+  content: "\e02d";
+}
+.icon-stop:before {
+  content: "\e02c";
+}
+.icon-stop-alt:before {
+  content: "\e02b";
+}
+.icon-stumbleupon:before {
+  content: "\e02a";
+}
+.icon-tag:before {
+  content: "\e029";
+}
+.icon-tags:before {
+  content: "\e028";
+}
+.icon-tasks:before {
+  content: "\e027";
+}
+.icon-text-height:before {
+  content: "\e026";
+}
+.icon-text-width:before {
+  content: "\e025";
+}
+.icon-th:before {
+  content: "\e024";
+}
+.icon-th-large:before {
+  content: "\e023";
+}
+.icon-th-list:before {
+  content: "\e022";
+}
+.icon-thumbs-down:before {
+  content: "\e021";
+}
+.icon-thumbs-up:before {
+  content: "\e020";
+}
+.icon-time:before {
+  content: "\e01f";
+}
+.icon-time-alt:before {
+  content: "\e01e";
+}
+.icon-tint:before {
+  content: "\e01d";
+}
+.icon-torso:before {
+  content: "\e01c";
+}
+.icon-trash:before {
+  content: "\e01b";
+}
+.icon-trash-alt:before {
+  content: "\e01a";
+}
+.icon-tumblr:before {
+  content: "\e019";
+}
+.icon-twitter:before {
+  content: "\e018";
+}
+.icon-universal-access:before {
+  content: "\e017";
+}
+.icon-unlock:before {
+  content: "\e016";
+}
+.icon-unlock-alt:before {
+  content: "\e015";
+}
+.icon-upload:before {
+  content: "\e014";
+}
+.icon-user:before {
+  content: "\e013";
+}
+.icon-video:before {
+  content: "\e012";
+}
+.icon-video-alt:before {
+  content: "\e011";
+}
+.icon-video-chat:before {
+  content: "\e010";
+}
+.icon-view-mode:before {
+  content: "\e00f";
+}
+.icon-vimeo:before {
+  content: "\e00e";
+}
+.icon-volume-down:before {
+  content: "\e00d";
+}
+.icon-volume-off:before {
+  content: "\e00c";
+}
+.icon-volume-up:before {
+  content: "\e00b";
+}
+.icon-w3c:before {
+  content: "\e00a";
+}
+.icon-warning-sign:before {
+  content: "\e009";
+}
+.icon-website:before {
+  content: "\e008";
+}
+.icon-website-alt:before {
+  content: "\e007";
+}
+.icon-wheelchair:before {
+  content: "\e006";
+}
+.icon-wordpress:before {
+  content: "\e005";
+}
+.icon-wrench:before {
+  content: "\e004";
+}
+.icon-wrench-alt:before {
+  content: "\e003";
+}
+.icon-youtube:before {
+  content: "\e002";
+}
+.icon-zoom-in:before {
+  content: "\e001";
+}
+.icon-zoom-out:before {
+  content: "\e000";
+}
+.icon-vkontakte:before {
+  content: "\e10e";
+}
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
+
+
+.detailBox {
+    width:400px;
+    border:1px solid #bbb;
+    margin:50px;
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+}
+.titleBox label{
+  color:#444;
+  margin:0;
+  display:inline-block;
+}
+
+.commentBox {
+    padding:10px;
+    border-top:1px dotted #bbb;
+}
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:300px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:50px;
+    height: 50px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+}
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* line 7, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.intro-section {
+  text-align: center;
+  color: #FFFFFF;
+}
+/* line 11, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.intro-section .logo {
+  font-family: 'Raleway', sans-serif;
+  margin-top: 100px;
+}
+/* line 15, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.intro-section .intro {
+  margin-top: 200px;
+  font-size: 3.75em;
+  line-height: 4.7em;
+}
+
+/* line 23, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.home {
+  width: 100%;
+  display: block;
+}
+
+/* line 28, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.cover-overlay {
+  min-height: 900px;
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  display: block;
+}
+
+/*custom font*/
+/*basic reset*/
+/* line 40, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 42, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+html {
+  height: 100%;
+  /*Image only BG fallback*/
+  background: url("http://thecodeplayer.com/uploads/media/gs.png");
+  /*background = gradient + image pattern combo*/
+  background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)), url("http://thecodeplayer.com/uploads/media/gs.png");
+}
+
+/* line 52, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+body {
+  font-family: montserrat, arial, verdana;
+}
+
+/*form styles*/
+/* line 57, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.tab-box {
+  height: 40px;
+}
+
+/* line 60, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.login-form {
+  width: 400px;
+  margin: 50px auto;
+  margin-top: 0px;
+  text-align: center;
+  position: relative;
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+/* line 74, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.login-form input, .login-form textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+
+/*buttons*/
+/* line 86, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.login-form .action-button {
+  width: 100px;
+  background: #27AE60;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+/* line 97, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.login-form .action-button:hover, .login-form .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+/*headings*/
+/* line 101, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.login-form-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+
+/* line 107, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.login-form-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* line 115, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.tab {
+  background: #dedede;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 80px;
+  float: right;
+  font-weight: bold;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius: 4px 4px 0px 0px;
+}
+/* line 124, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.tab a {
+  color: #000;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* line 133, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.signup-tab {
+  margin-left: 8px;
+}
+
+/* line 137, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.select-tab {
+  background-color: #FFF;
+}
+
+/* line 142, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+.panel {
+  height: 0px;
+}
+
+/* line 146, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+#loginbox {
+  min-height: 200px;
+  padding: 10px;
+}
+
+/* line 151, /home/anakin/codes/recollab/rails/app/assets/stylesheets/static_pages.css.scss */
+#signupbox {
+  min-height: 200px;
+  padding: 10px;
+  display: none;
+}
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+
