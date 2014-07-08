@@ -11,10 +11,29 @@
       .intro-section
         .logo
           %h1 reCollab
-        .intro
-          %h2
-            Reinventing collaboration
-          %a.btn-lg.btn.btn-primary{href: new_user_session_path  }
-            Sign in
-          %a.btn.btn-primary.btn-lg{href:  new_user_registration_path }
-            Sign up
+        .login-form-container
+          .tab-box
+            %a#signup-tab.tab{href:"#"}Signup
+            %a#login-tab.tab.select-tab{href:"#"} Login
+          .panel
+            #loginbox
+              = form_tag session_path(:user),:class => "login-form", :role => "form"  do
+                %h2.login-form-title
+                  Sign In
+                %h3.login-form-subtitle
+                  Welcome to recollab
+                = email_field_tag 'user[email]', nil, :placeholder => "Email" 
+                = password_field_tag 'user[password]', nil, :placeholder => "Password"
+                %button.action-button.btn.btn-default{type:"submit"} Sign in
+            #signupbox
+              = form_for(User.new,:html => { :class => "login-form", :role => "form" }) do |f| 
+                %h2.login-form-title
+                  Create your account
+                %h3.login-form-subtitle
+                  Welcome to recollab
+                = f.text_field :name, :placeholder => "Name" 
+                = f.email_field :email, :type => :email, :placeholder => "Email" 
+                = f.password_field :password,  :placeholder => "Password" 
+                = f.password_field :password_confirmation, :placeholder => "Confirm Password" 
+                %button.action-button.btn.btn-default{type:"submit"}
+                  Sign up

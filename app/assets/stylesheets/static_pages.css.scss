@@ -30,3 +30,126 @@
     width: 100%;
     display: block;
 }
+
+
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	background: url('http://thecodeplayer.com/uploads/media/gs.png');
+	/*background = gradient + image pattern combo*/
+	background: 
+		linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)), 
+		url('http://thecodeplayer.com/uploads/media/gs.png');
+}
+
+body {
+	font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+
+.tab-box{
+        height: 40px;
+}
+.login-form {
+	width: 400px;
+	margin: 50px auto;
+        margin-top: 0px;
+	text-align: center;
+	position: relative;
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+}
+
+.login-form input, .login-form textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+/*buttons*/
+.login-form .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+.login-form .action-button:hover, .login-form .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.login-form-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.login-form-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+
+.tab
+{
+background: #dedede;display: block;height: 40px;
+line-height: 40px;text-align: center;
+width: 80px;float: right;font-weight: bold;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius: 4px 4px 0px 0px;
+
+a
+{
+color: #000;
+margin: 0;
+padding: 0;
+text-decoration: none;
+}
+
+}
+.signup-tab
+{
+margin-left:8px;
+}
+.select-tab
+{
+background-color:#FFF;
+}
+
+.panel{
+height: 0px;
+}
+
+#loginbox
+{
+min-height:200px;
+padding:10px;
+}
+#signupbox
+{
+min-height:200px;
+padding:10px;
+display:none;
+}
