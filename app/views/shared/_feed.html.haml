@@ -1,47 +1,45 @@
-.row
-  .col-lg-4
-  .col-lg-4
-    - pages.each do |page|
-      .corgi_feed_well
-        .individual_feed_item
-          .feed_item
-            .feed_body
-              .row
-                .col-md-1
-                  = gravatar_for page.user
-                .col-md-9.col-md-offset-1
-                  .feed_text
-                    %p
-                      = page.title
-                    %p
-                      %a{href: "http://" + page.link , :target => "_blank"}
-                        = page.link
-                .col-md-1
-                  - if page.user == current_user
-                    = button_to "X", page , method: "delete" , class: "btn btn-xs"
-            %hr.feed_hr
-            - if !page.comments.empty?
-              .comment_area{style: "display: none"}
-                %ul.list-group
-                  - page.comments.sort_by(&:updated_at).reverse.each do |comment|
-                    %li.list-group-item
-                      = comment.body
-                      %span.badge
-                        = comment.updated_at.strftime("%B %d, %Y")
-            .bottom_meta
-              .row
-                .bottom_left
-                  %a{href:"#"}
-                    - page.tags.each do |tag|
-                      = link_to tag.name, pages_path(tag: tag.name) 
+- pages.each do |page|
+  .corgi_feed_well
+    .individual_feed_item
+      .feed_item
+        .feed_body
+          .row
+            .col-md-1
+              = gravatar_for page.user
+            .col-md-9.col-md-offset-1
+              .feed_text
+                %p
+                  = page.title
+                %p
+                  %a{href: "http://" + page.link , :target => "_blank"}
+                    = page.link
+            .col-md-1
+              - if page.user == current_user
+                = button_to  page ,{ method: "delete" , class: "btn btn-xs close" } do
+                  %span.glyphicon.glyphicon-remove
+        %hr.feed_hr
+        - if !page.comments.empty?
+          .comment_area{style: "display: none"}
+            %ul.list-group
+              - page.comments.sort_by(&:updated_at).reverse.each do |comment|
+                %li.list-group-item
+                  = comment.body
+                  %span.badge
+                    = comment.updated_at.strftime("%B %d, %Y")
+        .bottom_meta
+          .row
+            .bottom_left
+              %a{href:"#"}
+                - page.tags.each do |tag|
+                  = link_to tag.name, pages_path(tag: tag.name) 
 
-                .bottom_right
-                  = page.user.name
-                  %span |
-                  = page.updated_at.strftime("%B %d, %Y")
-                  %a.show_comment_link{href:"#"} 
-                    = "Comments (#{page.comments.count})"
-    = paginate pages
+            .bottom_right
+              = page.user.name
+              %span |
+              = page.updated_at.strftime("%B %d, %Y")
+              %a.show_comment_link{href:"#"} 
+                = "Comments (#{page.comments.count})"
+= paginate pages
 
 
       
