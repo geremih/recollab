@@ -80,6 +80,7 @@ body {
 .bottom_meta {
 	margin-top:-10px;
 	padding-left:20px;
+        padding-right:10px;
 	padding-bottom:20px;
 }
 .feed_stacked {
