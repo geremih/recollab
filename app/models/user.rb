@@ -7,10 +7,10 @@ class User < ActiveRecord::Base
   devise :omniauthable
 
   has_and_belongs_to_many :roles
-  has_many :pages
-  has_many :tags, through: :pages
-  has_many :follower_tag_relationships, foreign_key: "follower_id"
-  has_many :followed_tags, through: :follower_tag_relationships, source: :tag
+  has_many :pages, dependent: :destroy
+  has_many :tags, through: :pages, dependent: :destroy
+  has_many :follower_tag_relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_tags, through: :follower_tag_relationships, source: :tag , dependent: :destroy
   def role?(role)
     return !!self.roles.find_by_name(role.to_s)
   end
@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
     if user = User.find_by_email(data["email"])
       user
     else # Create a user with a stub password.
-      User.create!(:email => data["email"], :password => Devise.friendly_token[0,20])
+      User.create!(:email => data["email"], :password => Devise.friendly_token[0,20], :name => data[:name])
     end
   end
 
