@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :roles
   has_many :pages, dependent: :destroy
-  has_many :tags, through: :pages, dependent: :destroy
+  has_many :tags, through: :page
   has_many :follower_tag_relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_tags, through: :follower_tag_relationships, source: :tag , dependent: :destroy
   def role?(role)
