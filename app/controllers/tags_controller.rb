@@ -11,4 +11,13 @@ class TagsController < ApplicationController
     end
     redirect_to user_path(current_user)
   end
+
+  def index
+    @tags = current_user.tags
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @tags.collect(&:name)}
+    end
+  end
 end

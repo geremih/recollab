@@ -7,7 +7,7 @@ BaseApp::Application.routes.draw do
 
 
   resources :pages
-  resources :tags, only: [:show, :destroy]
+  resources :tags, only: [:show, :destroy, :index]
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   get "pages/index"
