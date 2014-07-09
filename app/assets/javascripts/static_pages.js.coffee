@@ -3,19 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
-ready ->
-        $(".tab").click ->
-                 X = $(this).attr('id');
-                if (X=='signup-tab')
-                        $("#login-tab").removeClass('select-tab')
-                        $("#signup-tab").addClass('select-tab')
-                        $("#loginbox").slideUp()
-                        $("#signupbox").slideDown()
-                else
-                        $("#signup").removeClass('select-tab')
-                        $("#login").addClass('select-tab')
-                        $("#signupbox").slideUp()
-                        $("#loginbox").slideDown()
+ready = ->
+        $("#login-tabs").tabs()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
