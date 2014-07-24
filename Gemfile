@@ -51,6 +51,7 @@ group :test do
   gem "capybara"
   gem "shoulda"
   gem "email_spec"
+  gem "guard-rspec"
 end
 
 group :production, :development do

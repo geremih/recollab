@@ -2,12 +2,11 @@ require 'spec_helper'
 
 describe Admin::UsersController do
 
-  let(:user) { mock_model(User) }
+  let(:user) { create(:user)}
 
   before do
-    controller.stub(:current_user).and_return(user)
-
-    user.should_receive(:admin?).and_return(true)
+    user.make_admin
+    sign_in user
   end
 
   describe "GET 'index'" do
