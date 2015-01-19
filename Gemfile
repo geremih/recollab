@@ -18,6 +18,7 @@ gem "coffee-rails", "~> 4.0.0"
 gem "jquery-rails"
 
 gem 'sass-rails', github: 'rails/sass-rails'
+gem 'bower-rails'
 
 # User authentication
 gem "devise", "3.2.4"

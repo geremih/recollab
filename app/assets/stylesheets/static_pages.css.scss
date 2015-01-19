@@ -6,7 +6,7 @@
 .intro-section{
 
     text-align: center;
-    color: #FFFFFF;
+    color: #000;
     .logo{
         font-family: 'Raleway', sans-serif;
         margin-top: 100px;
@@ -24,13 +24,16 @@
     display: block;
 }
 
+
 .cover-overlay{
-    min-height: 900px;
-    background: rgba(0, 0, 0, 0.55);
-    width: 100%;
-    display: block;
+    height: 100%;
+    background: rgb(255,255,255);
 }
 
+.ui-widget-header{
+    background: rgb(255,255,255);
+    border:0px;
+}
 
 /*custom font*/
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
